@@ -20,6 +20,7 @@
 		E51E28082366B9FC007B52F5 /* HomePageTow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E28072366B9FC007B52F5 /* HomePageTow.swift */; };
 		E51E280A2366BCC4007B52F5 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E28092366BCC4007B52F5 /* TabViewController.swift */; };
 		E51E280C2366C72E007B52F5 /* CustomCenterBut.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E280B2366C72E007B52F5 /* CustomCenterBut.swift */; };
+		E5F3C83A236FB3D6004A6997 /* AlertTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3C839236FB3D6004A6997 /* AlertTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E51E28072366B9FC007B52F5 /* HomePageTow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTow.swift; sourceTree = "<group>"; };
 		E51E28092366BCC4007B52F5 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		E51E280B2366C72E007B52F5 /* CustomCenterBut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCenterBut.swift; sourceTree = "<group>"; };
+		E5F3C839236FB3D6004A6997 /* AlertTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				E51E27D923669B9F007B52F5 /* Swift_Demo.xcdatamodeld */,
 				E51E28092366BCC4007B52F5 /* TabViewController.swift */,
 				E51E280B2366C72E007B52F5 /* CustomCenterBut.swift */,
+				E5F3C839236FB3D6004A6997 /* AlertTool.swift */,
 			);
 			path = Swift_Demo;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				E51E280423669BD8007B52F5 /* HomePage.swift in Sources */,
 				E51E27DB23669B9F007B52F5 /* Swift_Demo.xcdatamodeld in Sources */,
 				E51E27D523669B9F007B52F5 /* ViewController.swift in Sources */,
+				E5F3C83A236FB3D6004A6997 /* AlertTool.swift in Sources */,
 				E51E27D123669B9F007B52F5 /* AppDelegate.swift in Sources */,
 				E51E28082366B9FC007B52F5 /* HomePageTow.swift in Sources */,
 				E51E280A2366BCC4007B52F5 /* TabViewController.swift in Sources */,
