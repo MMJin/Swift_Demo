@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import ESTabBarController_swift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,13 +16,90 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         //let tabVC = TabViewController()
-        let navVC = UINavigationController()
-        navVC .addChild(HomePage())
-        self.window?.rootViewController = navVC
+//        let navVC = UINavigationController()
+//        navVC .addChild(HomePage())
+//        self.window?.rootViewController = navVC
+//        self.window?.makeKeyAndVisible()
+/************************************************/
+        let tab = self.customIrregularityStyle(delegate: self as? UITabBarControllerDelegate)
+        self.window?.rootViewController = tab
         self.window?.makeKeyAndVisible()
 
+        // 静态图片引导页
+        self.setStaticGuidePage()
+        // 动态图片引导页
+        //self.setDynamicGuidePage()
+        // 视频引导页
+        //self.setVideoGuidePage()
         guard let _ = (scene as? UIWindowScene) else { return }
     }
+
+    func setStaticGuidePage() {
+            let imageNameArray: [String] = ["lead01", "lead02", "lead03"]
+            let guideView = HHGuidePageHUD.init(imageNameArray: imageNameArray, isHiddenSkipButton: false)
+            self.window?.rootViewController?.view.addSubview(guideView)
+        }
+
+        func setDynamicGuidePage() {
+            let imageNameArray: [String] = ["guideImage6.gif", "guideImage7.gif", "guideImage8.gif"]
+            let guideView = HHGuidePageHUD.init(imageNameArray: imageNameArray, isHiddenSkipButton: false)
+            self.window?.rootViewController?.view.addSubview(guideView)
+        }
+
+        func setVideoGuidePage() {
+            let urlStr = Bundle.main.path(forResource: "qidong.mp4", ofType: nil)
+            let videoUrl = NSURL.fileURL(withPath: urlStr!)
+            let guideView = HHGuidePageHUD.init(videoURL: videoUrl, isHiddenSkipButton: false)
+            self.window?.rootViewController?.view.addSubview(guideView)
+        }
+
+        // 加载底部tabbar样式
+         func customIrregularityStyle(delegate: UITabBarControllerDelegate?) -> ESTabBarController {
+            let tabBarController = ESTabBarController()
+            tabBarController.delegate = delegate
+            tabBarController.title = "Irregularity"
+            tabBarController.tabBar.shadowImage = UIImage(named: "transparent")
+            tabBarController.shouldHijackHandler = {
+                tabbarController, viewController, index in
+                if index == 2 {
+                    return true
+                }
+                return false
+            }
+            tabBarController.didHijackHandler = {
+                [weak tabBarController] tabbarController, viewController, index in
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+    //                let vc = FMPlayController()
+    //                tabBarController?.present(vc, animated: true, completion: nil)
+                }
+            }
+
+            let v1 = HomePage()
+            let v2 = HomePageTow()
+//            let v3 = FMPlayController()
+//            let v4 = FMFindController()
+//            let v5 = FMMineController()
+
+            v1.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "首页", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
+            v2.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "我听", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
+//            v3.tabBarItem = ESTabBarItem.init(YYIrregularityContentView(), title: nil, image: UIImage(named: "tab_play"), selectedImage: UIImage(named: "tab_play"))
+//            v4.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "发现", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
+//            v5.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "我的", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
+            let n1 = YYNavigationController.init(rootViewController: v1)
+            let n2 = YYNavigationController.init(rootViewController: v2)
+//            let n3 = YYNavigationController.init(rootViewController: v3)
+//            let n4 = YYNavigationController.init(rootViewController: v4)
+//            let n5 = YYNavigationController.init(rootViewController: v5)
+            v1.title = "首页"
+            v2.title = "我听"
+//            v3.title = "播放"
+//            v4.title = "发现"
+//            v5.title = "我的"
+
+            tabBarController.viewControllers = [n1, n2]
+            return tabBarController
+        }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

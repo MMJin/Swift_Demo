@@ -1,0 +1,85 @@
+PODS:
+  - Alamofire (4.8.1)
+  - DNSPageView (1.1.4)
+  - ESTabBarController-swift (2.6.4)
+  - FSPagerView (0.8.2)
+  - HandyJSON (5.0.0-beta.1)
+  - JXMarqueeView (0.0.7)
+  - Kingfisher (5.2.0)
+  - LTScrollView (0.2.1)
+  - MJRefresh (3.1.15.7)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Result (4.1.0)
+  - SnapKit (4.2.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftMessages (6.0.2):
+    - SwiftMessages/App (= 6.0.2)
+  - SwiftMessages/App (6.0.2)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - DNSPageView
+  - ESTabBarController-swift
+  - FSPagerView
+  - HandyJSON (from `https://github.com/alibaba/HandyJSON.git`, branch `dev_for_swift5.0`)
+  - JXMarqueeView
+  - Kingfisher
+  - LTScrollView
+  - MJRefresh
+  - Moya
+  - SnapKit
+  - SVProgressHUD
+  - SwiftMessages
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - DNSPageView
+    - ESTabBarController-swift
+    - FSPagerView
+    - JXMarqueeView
+    - Kingfisher
+    - LTScrollView
+    - MJRefresh
+    - Moya
+    - Result
+    - SnapKit
+    - SVProgressHUD
+    - SwiftMessages
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  HandyJSON:
+    :branch: dev_for_swift5.0
+    :git: https://github.com/alibaba/HandyJSON.git
+
+CHECKOUT OPTIONS:
+  HandyJSON:
+    :commit: a2ba4e537711ae1fcd9183679c4db878eb171a78
+    :git: https://github.com/alibaba/HandyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  DNSPageView: 370924a5e1f424444af2403f2b90143a2dedd089
+  ESTabBarController-swift: 58cca4ab7de980657d99a02181c1ff310983e975
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
+  HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
+  JXMarqueeView: a318eca76348b1ce8ed3ddc4fc7271ed4262bf30
+  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
+  LTScrollView: 93fff4aed9f9545f541a99b320b27808f5307c12
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: efadba89a16415f8bbec77cb9621b151b87f32d7
+
+COCOAPODS: 1.6.1
