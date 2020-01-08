@@ -932,7 +932,8 @@ class WRNavigationBar
 extension WRNavigationBar
 {
     class func isIphoneX() -> Bool {
-        return UIScreen.main.bounds.equalTo(CGRect(x: 0, y: 0, width: 375, height: 812))
+
+        return typeIsIphoneX
     }
     class func navBarBottom() -> Int {
         return self.isIphoneX() ? 88 : 64;

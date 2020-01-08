@@ -20,8 +20,14 @@ let DominantColor = UIColor.init(red: 242/255.0, green: 77/255.0, blue: 51/255.0
 let FooterViewColor = UIColor.init(red: 240/255.0, green: 241/255.0, blue: 244/255.0, alpha: 1)
 
 // iphone X
-let isIphoneX = YYScreenHeigth == 812 ? true : false
+//let isIphoneX = YYScreenHeigth == 812 ? true : false
+let screenHeight = UIScreen.main.nativeBounds.size.height;
+let typeIsIphoneX = screenHeight == 2436 || screenHeight == 1792 || screenHeight == 2688 || screenHeight == 1624 ? true : false
 // navigationBarHeight
-let navigationBarHeight : CGFloat = isIphoneX ? 88 : 64
+let navigationBarHeight : CGFloat = typeIsIphoneX ? 88 : 64
 // tabBarHeight
-let tabBarHeight : CGFloat = isIphoneX ? 49 + 34 : 49
+let tabBarHeight : CGFloat = typeIsIphoneX ? 49 + 34 : 49
+
+
+
+

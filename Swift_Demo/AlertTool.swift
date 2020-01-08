@@ -20,7 +20,7 @@ class AlertUtil: NSObject {
         mybolock("jinmingming")
         }
         let cancleAl = UIAlertAction(title: "取消", style: UIAlertAction.Style.default) { (a) in
-          mybolock("点击了取消了")
+          mybolock("点击了取消了")//block 返回值
         }
         alertCtrl.addAction(al)
         alertCtrl.addAction(cancleAl)

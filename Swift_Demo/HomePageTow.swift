@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 //声明
-
+import Alamofire
 
 class HomePageTow: UIViewController,UITableViewDataSource,UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource{
     var myCollectionView : UICollectionView?
@@ -63,12 +63,26 @@ class HomePageTow: UIViewController,UITableViewDataSource,UITableViewDelegate,UI
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        let urlStr = "http://onapp.yahibo.top/public/?s=api/test/list"
+       Alamofire.request(urlStr, method: .post, parameters: ["name":"hibo","password":"123456"]).responseJSON { (response) in
+            switch response.result {
+            case .success(let json):
+                print(json)
+                break
+            case .failure(let error):
+                print("error:\(error)")
+                break
+            }
+        }
+
+
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .yellow
         self.setCollectionViewUI()
+        self.setUI();
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {

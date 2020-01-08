@@ -20,7 +20,9 @@ class HomePage: UIViewController {
         btn .addTarget(self, action: #selector(shareAlertAction), for: .touchUpInside)
         self.view .addSubview(btn)
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false;
+    }
     @objc func shareAlertAction(){
         let a = Int(3.14)
         print(a)
