@@ -61,7 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             tabBarController.tabBar.shadowImage = UIImage(named: "transparent")
             tabBarController.shouldHijackHandler = {
                 tabbarController, viewController, index in
-                if index == 2 {
+                if index == 3 {
                     return true
                 }
                 return false
@@ -77,27 +77,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
             let v1 = HomePage()
             let v2 = HomePageTow()
-//            let v3 = FMPlayController()
+            let v4 = ViewAnimationAndSomeTool()
 //            let v4 = FMFindController()
 //            let v5 = FMMineController()
 
             v1.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "首页", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
             v2.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "我听", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
-//            v3.tabBarItem = ESTabBarItem.init(YYIrregularityContentView(), title: nil, image: UIImage(named: "tab_play"), selectedImage: UIImage(named: "tab_play"))
-//            v4.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "发现", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
+ //           v4.tabBarItem = ESTabBarItem.init(YYIrregularityContentView(), title: nil, image: UIImage(named: "tab_play"), selectedImage: UIImage(named: "tab_play"))
+            v4.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "发现", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
 //            v5.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "我的", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
             let n1 = YYNavigationController.init(rootViewController: v1)
             let n2 = YYNavigationController.init(rootViewController: v2)
-//            let n3 = YYNavigationController.init(rootViewController: v3)
+            let n4 = YYNavigationController.init(rootViewController: v4)
 //            let n4 = YYNavigationController.init(rootViewController: v4)
 //            let n5 = YYNavigationController.init(rootViewController: v5)
             v1.title = "首页"
             v2.title = "我听"
-//            v3.title = "播放"
-//            v4.title = "发现"
+            //v3.title = "播放"
+            v4.title = "发现"
 //            v5.title = "我的"
 
-            tabBarController.viewControllers = [n1, n2]
+            tabBarController.viewControllers = [n1, n2,n4]
             return tabBarController
         }
 

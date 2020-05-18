@@ -22,6 +22,7 @@
 		E51E280A2366BCC4007B52F5 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E28092366BCC4007B52F5 /* TabViewController.swift */; };
 		E51E280C2366C72E007B52F5 /* CustomCenterBut.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E280B2366C72E007B52F5 /* CustomCenterBut.swift */; };
 		E53A105E23A8662F00FCB101 /* MMJAlamofireRequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53A105D23A8662F00FCB101 /* MMJAlamofireRequestTool.swift */; };
+		E5661E64246E2F8000AEC5E5 /* ViewAnimationAndSomeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5661E63246E2F8000AEC5E5 /* ViewAnimationAndSomeTool.swift */; };
 		E575540D238553FC008F4EA5 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = E575540C238553FC008F4EA5 /* Const.swift */; };
 		E57554272385604A008F4EA5 /* UINavigationBar+YHIndicatorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E57554112385604A008F4EA5 /* UINavigationBar+YHIndicatorImage.m */; };
 		E57554282385604A008F4EA5 /* UINavigationController+YHBackTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = E57554142385604A008F4EA5 /* UINavigationController+YHBackTitle.m */; };
@@ -86,6 +87,7 @@
 		E51E28092366BCC4007B52F5 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		E51E280B2366C72E007B52F5 /* CustomCenterBut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCenterBut.swift; sourceTree = "<group>"; };
 		E53A105D23A8662F00FCB101 /* MMJAlamofireRequestTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMJAlamofireRequestTool.swift; sourceTree = "<group>"; };
+		E5661E63246E2F8000AEC5E5 /* ViewAnimationAndSomeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimationAndSomeTool.swift; sourceTree = "<group>"; };
 		E575540C238553FC008F4EA5 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		E57554112385604A008F4EA5 /* UINavigationBar+YHIndicatorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+YHIndicatorImage.m"; sourceTree = "<group>"; };
 		E57554122385604A008F4EA5 /* UINavigationController+YHBackTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YHBackTitle.h"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				E51E27D423669B9F007B52F5 /* ViewController.swift */,
 				E51E280323669BD8007B52F5 /* HomePage.swift */,
 				E51E28072366B9FC007B52F5 /* HomePageTow.swift */,
+				E5661E63246E2F8000AEC5E5 /* ViewAnimationAndSomeTool.swift */,
 				E51E28092366BCC4007B52F5 /* TabViewController.swift */,
 				E51E280B2366C72E007B52F5 /* CustomCenterBut.swift */,
 				E5F3C839236FB3D6004A6997 /* AlertTool.swift */,
@@ -519,6 +522,7 @@
 				E575543C23856094008F4EA5 /* YYIrregularityContentView.swift in Sources */,
 				E51E280A2366BCC4007B52F5 /* TabViewController.swift in Sources */,
 				E575543E23856094008F4EA5 /* YYNavigationController.swift in Sources */,
+				E5661E64246E2F8000AEC5E5 /* ViewAnimationAndSomeTool.swift in Sources */,
 				E57554322385604A008F4EA5 /* WRProxy.swift in Sources */,
 				E575542A2385604A008F4EA5 /* UIImage+GIF.swift in Sources */,
 				E57554352385604A008F4EA5 /* JCyclePictureView.swift in Sources */,

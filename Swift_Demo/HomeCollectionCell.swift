@@ -23,12 +23,12 @@ override init(frame: CGRect) {
     super.init(frame: frame)
     //初始化各种控件
     imgView = UIImageView()
-    imgView?.frame = CGRect(x: 0, y: -10, width: (width-30)/2, height: 150)
+    imgView?.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.width)
     imgView?.image = UIImage.init(imageLiteralResourceName: "Launch")
     self .addSubview(imgView!)
 
     titleLabel = UILabel()
-    titleLabel?.frame = CGRect(x: 5, y:imgView!.frame.maxY-12, width: imgView!.frame.maxY-12, height: 50)
+    titleLabel?.frame = CGRect(x: 5, y:imgView!.frame.maxY, width: frame.size.width-10, height: 10)
     titleLabel?.numberOfLines = 0
     //titleLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .Weight)
     titleLabel?.textColor = UIColor.lightGray
